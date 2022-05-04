@@ -1,9 +1,9 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import './global.scss';
 import { createWebHashHistory, createRouter } from "vue-router";
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
-
 
 const history = createWebHashHistory();
 const router = createRouter(
@@ -21,6 +21,7 @@ const router = createRouter(
         ]
     }
 );
+
 const app = createApp(App);
 app.use(router);
 app.mount('#app');
