@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <Container>
     <Switch v-model:value="isChecked" />
+    <br />
     {{ "Switch Demo: " + isChecked }}
-  </div>
+  </Container>
 </template>
 
 <script lang="ts">

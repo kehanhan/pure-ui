@@ -1,7 +1,5 @@
 <template>
-  <Container>
-    Dialog
-  </Container>
+  <Container> Installation </Container>
 </template>
 
 <style lang="scss" scoped></style>
