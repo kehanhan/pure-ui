@@ -1,6 +1,10 @@
 <template>
   <div>
-    <button @click="toggle" :class="{ checked: value }">
+    <button
+      @click="toggle"
+      class="pure-switch"
+      :class="{ 'pure-checked': value }"
+    >
       <span></span>
     </button>
   </div>
@@ -20,11 +24,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: 18px;
 
-button {
+.pure-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -43,7 +47,7 @@ button {
     transition: all 250ms;
   }
 
-  &.checked {
+  &.pure-checked {
     background-color: #40b57f;
   }
   &:active {
@@ -51,10 +55,10 @@ button {
       width: $h2 + 4px;
     }
   }
-  &.checked > span {
+  &.pure-checked > span {
     left: calc(100% - #{$h2} - 2px);
   }
-  &.checked:active {
+  &.pure-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;

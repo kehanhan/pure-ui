@@ -1,4 +1,5 @@
 import { createApp, VueElement } from "vue";
+import "./components/libs/pure.scss";
 import App from "./App.vue";
 import "./global.scss";
 import { router } from "./router";
