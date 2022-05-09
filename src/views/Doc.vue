@@ -40,6 +40,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.router-link-active {
+  color: #39a573;
+}
 a:hover {
   color: #39a573;
 }
