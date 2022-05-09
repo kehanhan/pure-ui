@@ -105,7 +105,8 @@ $border-color: #d9d9d9;
     font-size: 20px;
   }
   > main {
-    padding: 40px 16px;
+    min-height: 10em;
+    padding: 12px 16px;
   }
   > footer {
     border-top: 1px solid $border-color;
