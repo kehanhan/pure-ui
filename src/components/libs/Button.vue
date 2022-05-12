@@ -118,7 +118,7 @@ $green: #40b57f;
     &:hover,
     &:focus {
       color: inherit;
-      background: darken(white, 5%);
+      background: lighten($green, 15%);
     }
     > .pure-loading {
       width: 100%;

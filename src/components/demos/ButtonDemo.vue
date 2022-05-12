@@ -3,9 +3,9 @@
     <h1>样式</h1>
     <div>
       <Button>默认</Button>
-      <Button theme="text">文本</Button>
       <Button theme="rounded">圆角</Button>
-      <Button theme="float"> + </Button>
+      <Button theme="text">文本</Button>
+      <Button theme="float"> <Icon name="upload"></Icon> </Button>
     </div>
     <br />
     <h1>大小</h1>
@@ -16,21 +16,21 @@
     </div>
     <br />
     <div>
-      <Button theme="text" size="big"> 文本 </Button>
-      <Button theme="text"> 文本 </Button>
-      <Button theme="text" size="small"> 文本 </Button>
-    </div>
-    <br />
-    <div>
       <Button theme="rounded" size="big"> 圆角 </Button>
       <Button theme="rounded"> 圆角 </Button>
       <Button theme="rounded" size="small"> 圆角 </Button>
     </div>
     <br />
     <div>
-      <Button theme="float" size="big"> + </Button>
-      <Button theme="float"> + </Button>
-      <Button theme="float" size="small"> + </Button>
+      <Button theme="text" size="big"> 文本 </Button>
+      <Button theme="text"> 文本 </Button>
+      <Button theme="text" size="small"> 文本 </Button>
+    </div>
+    <br />
+    <div>
+      <Button theme="float" size="big"><Icon name="upload"></Icon> </Button>
+      <Button theme="float"> <Icon name="upload"></Icon> </Button>
+      <Button theme="float" size="small"> <Icon name="upload"></Icon> </Button>
     </div>
     <br />
     <h1>禁用</h1>
@@ -38,23 +38,41 @@
       <Button disabled>默认</Button>
       <Button disabled theme="text">文本</Button>
       <Button disabled theme="rounded">圆角</Button>
-      <Button disabled theme="float"> + </Button>
+      <Button disabled theme="float"> <Icon name="upload"></Icon> </Button>
     </div>
     <br />
     <h1>加载中</h1>
     <div>
       <Button loading>默认</Button>
+      <Button :loading="true" theme="rounded">圆角</Button>
       <Button loading theme="text">文本</Button>
-      <Button loading theme="rounded">圆角</Button>
-      <Button loading theme="float"> + </Button>
+      <Button :loading="isLoading" theme="float">
+        <Icon name="upload"></Icon>
+      </Button>
     </div>
   </Container>
 </template>
 <script lang="ts">
+import { ref } from "vue";
 import Button from "../libs/Button.vue";
 
 export default {
   components: { Button },
+  setup() {
+    const isLoading = ref(true);
+    const changeStatus = () => {
+      setInterval(() => {
+        isLoading.value = !isLoading.value;
+      }, 2000);
+    };
+    changeStatus();
+
+    return { isLoading };
+  },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.pure-theme-float {
+  background-color: #40b57f;
+}
+</style>
