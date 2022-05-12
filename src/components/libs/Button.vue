@@ -96,7 +96,7 @@ $green: #40b57f;
 
   &.pure-theme-text {
     border-color: transparent;
-    color: inherit;
+    color: $green;
     &:hover,
     &:focus {
       background: darken(white, 5%);
