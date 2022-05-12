@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBar />
-    <aside>
+    <aside v-if="menuVisible">
       <ul>
         <li class="nav-item">
           <h3>指南</h3>
@@ -33,13 +33,23 @@
 </template>
 
 <script lang="ts">
+import { Ref, inject } from "vue";
 import NavBar from "../components/NavBar.vue";
 export default {
   components: { NavBar },
+  setup() {
+    const menuVisible = inject<Ref<boolean>>("menuVisible");
+    return { menuVisible };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 800px) {
+  main {
+    left: 0 !important;
+  }
+}
 .router-link-active {
   color: #39a573;
 }
@@ -52,7 +62,7 @@ aside {
   background-color: #fff;
   width: 20rem;
   position: fixed;
-  z-index: 10;
+  z-index: 11;
   top: 3.6rem;
   left: 0;
   bottom: 0;
@@ -76,5 +86,6 @@ main {
   top: 3.6rem;
   left: 20rem;
   bottom: 0;
+  overflow: auto;
 }
 </style>

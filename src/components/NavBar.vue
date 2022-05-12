@@ -4,6 +4,8 @@
       <div class="logo">
         <router-link to="/">Pure UI</router-link>
       </div>
+      <div class="toggle" @click="toggle"><Icon name="sidebar"></Icon></div>
+
       <div class="menu">
         <ul class="links">
           <li>
@@ -16,9 +18,25 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { inject, Ref } from "vue";
+
+const menuVisible = inject<Ref<boolean>>("menuVisible")!;
+console.log(menuVisible);
+const toggle = () => {
+  menuVisible.value = !menuVisible.value;
+};
+</script>
 
 <style lang="scss" scoped>
+@media (max-width: 800px) {
+  .logo {
+    display: none;
+  }
+  .toggle {
+    display: block !important;
+  }
+}
 .nav-bar {
   position: fixed;
   z-index: 20;
@@ -31,15 +49,18 @@
   padding: 0.7rem 1.5rem;
   line-height: 2.2rem;
   display: flex;
+  justify-content: space-between;
 
-  & .logo {
+  .logo {
     font-size: 1.3rem;
     font-weight: 500;
     color: #2c3e50;
     margin-right: auto;
   }
-
-  & .links {
+  .toggle {
+    display: none;
+  }
+  .links {
     display: flex;
     padding-left: 1.5rem;
     background-color: #fff;
