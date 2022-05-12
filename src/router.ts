@@ -4,10 +4,10 @@ import Doc from "./views/Doc.vue";
 import Introduction from "./components/guides/Introduction.vue";
 import Installation from "./components/guides/Installation.vue";
 import GetStarted from "./components/guides/GetStarted.vue";
-import SwitchDemo from "./components/Demos/SwitchDemo.vue";
-import ButtonDemo from "./components/Demos/ButtonDemo.vue";
-import DialogDemo from "./components/Demos/DialogDemo.vue";
-import TabDemo from "./components/Demos/TabDemo.vue";
+import SwitchDemo from "./components/demos/SwitchDemo.vue";
+import ButtonDemo from "./components/demos/ButtonDemo.vue";
+import DialogDemo from "./components/demos/DialogDemo.vue";
+import TabDemo from "./components/demos/TabDemo.vue";
 
 const history = createWebHashHistory();
 export const router = createRouter({
