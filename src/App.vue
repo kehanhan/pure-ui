@@ -19,9 +19,7 @@ const setMenu = () => {
 window.onload = () => setMenu();
 window.onresize = () => setMenu();
 router.afterEach(() => {
-  if (document.documentElement.clientWidth < 800) {
-    menuVisible.value = false;
-  }
+  document.documentElement.clientWidth < 800 && (menuVisible.value = false);
 });
 </script>
 
