@@ -22,7 +22,6 @@
 import { inject, Ref } from "vue";
 
 const menuVisible = inject<Ref<boolean>>("menuVisible")!;
-console.log(menuVisible);
 const toggle = () => (menuVisible.value = !menuVisible.value);
 </script>
 
