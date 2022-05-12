@@ -8,6 +8,16 @@
       <Button theme="float"> <Icon name="upload"></Icon> </Button>
     </div>
     <br />
+    <h1>加载中</h1>
+    <div>
+      <Button loading>默认</Button>
+      <Button :loading="true" theme="rounded">圆角</Button>
+      <Button loading theme="text">文本</Button>
+      <Button :loading="isLoading" theme="float">
+        <Icon name="upload"></Icon>
+      </Button>
+    </div>
+    <br />
     <h1>大小</h1>
     <div>
       <Button size="big"> 默认 </Button>
@@ -40,16 +50,6 @@
       <Button disabled theme="rounded">圆角</Button>
       <Button disabled theme="float"> <Icon name="upload"></Icon> </Button>
     </div>
-    <br />
-    <h1>加载中</h1>
-    <div>
-      <Button loading>默认</Button>
-      <Button :loading="true" theme="rounded">圆角</Button>
-      <Button loading theme="text">文本</Button>
-      <Button :loading="isLoading" theme="float">
-        <Icon name="upload"></Icon>
-      </Button>
-    </div>
   </Container>
 </template>
 <script lang="ts">
@@ -72,6 +72,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.pure-button {
+  margin: 5px;
+}
 .pure-theme-float {
   background-color: #40b57f;
 }
