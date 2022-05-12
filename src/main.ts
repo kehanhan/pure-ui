@@ -3,8 +3,11 @@ import "./components/libs/pure.scss";
 import App from "./App.vue";
 import "./global.scss";
 import { router } from "./router";
-import "//at.alicdn.com/t/font_3397136_956a78uliy.js";
+
+// iconfont
+import "https://at.alicdn.com/t/font_3397136_956a78uliy.js";
 import Icon from "./components/Icon.vue";
+
 import Container from "./components/Container.vue";
 
 const app = createApp(App);
