@@ -6,6 +6,7 @@
         :class="{ selected: title === selected }"
         v-for="(title, index) in titles"
         :key="index"
+        @click="select(title as string)"
       >
         {{ title }}
       </div>
@@ -14,16 +15,15 @@
     <div class="pure-tabs-content">
       <component
         class="pure-tabs-content-item"
-        v-for="(tab, index) in defaults"
-        :is="tab"
-        :key="index"
+        :is="currentTab"
+        :key="currentTab?.props?.title"
       ></component>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
 import Tab from "./Tab.vue";
 export default defineComponent({
   props: {
@@ -46,7 +46,14 @@ export default defineComponent({
         titles.push(tag.props.title);
       }
     });
-    return { defaults, titles };
+    const currentTab = computed(() => {
+      return defaults.find((tag) => tag.props?.title === props.selected);
+    });
+    const select = (title: string) => {
+      context.emit("update:selected", title);
+    };
+
+    return { defaults, titles, currentTab, select };
   },
 });
 </script>
