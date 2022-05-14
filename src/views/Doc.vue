@@ -86,6 +86,7 @@ main {
   z-index: 1;
   top: 3.6rem;
   left: 20rem;
+  right: 0;
   bottom: 0;
   overflow: auto;
 }
