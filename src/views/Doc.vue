@@ -48,6 +48,7 @@ export default {
 @media (max-width: 800px) {
   main {
     left: 0 !important;
+    max-width: 100% !important;
   }
 }
 .router-link-active {
@@ -78,7 +79,7 @@ aside {
   }
 }
 main {
-  width: 100%;
+  max-width: calc(100% - 3.6rem);
   text-align: left;
   background-color: #fff;
   position: fixed;
