@@ -3,6 +3,7 @@ import "./components/libs/pure.scss";
 import App from "./App.vue";
 import "./global.scss";
 import { router } from "./router";
+import "github-markdown-css";
 
 // iconfont
 import "https://at.alicdn.com/t/font_3397136_956a78uliy.js";

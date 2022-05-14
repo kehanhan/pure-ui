@@ -1,8 +1,8 @@
 <template>
-  <div id="container" @click="toggle">
+  <article class="container markdown-body" @click="toggle">
     <slot />
     <br />
-  </div>
+  </article>
 </template>
 <script lang="ts" setup>
 import { inject, Ref } from "vue";
@@ -12,7 +12,7 @@ const toggle = () =>
   document.documentElement.clientWidth < 800 && (menuVisible.value = false);
 </script>
 <style lang="scss" scoped>
-#container {
+.container {
   padding: 3em;
   height: 100%;
 }
