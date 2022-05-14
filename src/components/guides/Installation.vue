@@ -1,5 +1,10 @@
 <template>
-  <Container> Installation </Container>
-</template>
+  <Container>
+    <h1>安装</h1>
+    <pre><code>npm install pure-ui-vue3
 
-<style lang="scss" scoped></style>
+# 或者
+
+yarn add pure-ui-vue3</code></pre>
+  </Container>
+</template>

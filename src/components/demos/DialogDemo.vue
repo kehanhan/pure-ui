@@ -1,6 +1,7 @@
 <template>
   <Container>
-    <h1>实例1</h1>
+    <h1>Dialog组件</h1>
+    <h2>基本</h2>
     <Button @click="toggleDialog">toggle</Button>
     <Dialog v-model:visible="showDialog" :ok="ok1" :cancel="cancel1">
       <template v-slot:title>

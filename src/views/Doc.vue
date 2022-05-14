@@ -62,7 +62,7 @@ aside {
   background-color: #fff;
   width: 20rem;
   position: fixed;
-  z-index: 11;
+  z-index: 2;
   top: 3.6rem;
   left: 0;
   bottom: 0;
@@ -82,7 +82,7 @@ main {
   text-align: left;
   background-color: #fff;
   position: fixed;
-  z-index: 10;
+  z-index: 1;
   top: 3.6rem;
   left: 20rem;
   bottom: 0;

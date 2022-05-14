@@ -1,6 +1,7 @@
 <template>
   <Container>
-    <h2>示例</h2>
+    <h1>Tab组件</h1>
+    <h2>基本</h2>
     <Tabs v-model:selected="selectedTab">
       <Tab title="Tab1">内容1</Tab>
       <Tab title="Tab2">内容2</Tab>

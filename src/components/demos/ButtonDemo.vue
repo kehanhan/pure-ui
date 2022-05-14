@@ -1,6 +1,7 @@
 <template>
   <Container>
-    <h1>样式</h1>
+    <h1>Button组件</h1>
+    <h2>基本</h2>
     <div>
       <Button>默认</Button>
       <Button theme="rounded">圆角</Button>
@@ -8,7 +9,7 @@
       <Button theme="float"> <Icon name="upload"></Icon> </Button>
     </div>
     <br />
-    <h1>加载中</h1>
+    <h2>加载中</h2>
     <div>
       <Button loading>默认</Button>
       <Button :loading="true" theme="rounded">圆角</Button>
@@ -18,7 +19,7 @@
       </Button>
     </div>
     <br />
-    <h1>大小</h1>
+    <h2>大小</h2>
     <div>
       <Button size="big"> 默认 </Button>
       <Button> 默认 </Button>
@@ -43,7 +44,7 @@
       <Button theme="float" size="small"> <Icon name="upload"></Icon> </Button>
     </div>
     <br />
-    <h1>禁用</h1>
+    <h2>禁用</h2>
     <div>
       <Button disabled>默认</Button>
       <Button disabled theme="text">文本</Button>
