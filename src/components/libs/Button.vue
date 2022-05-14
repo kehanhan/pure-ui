@@ -49,6 +49,7 @@ $green: #40b57f;
 .pure-button {
   box-sizing: border-box;
   position: relative;
+  margin: 5px;
   padding: 0 12px;
   font-size: 16px;
   height: 2em;
@@ -115,6 +116,7 @@ $green: #40b57f;
     border-radius: 50%;
     box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
       0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    background-color: #40b57f;
     &:hover {
       color: inherit;
       background: lighten($green, 15%);
