@@ -1,5 +1,5 @@
 <template>
-  <article class="container markdown-body" @click="toggle">
+  <article class="container" @click="toggle">
     <slot />
     <br />
   </article>
