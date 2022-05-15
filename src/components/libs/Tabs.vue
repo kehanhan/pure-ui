@@ -13,11 +13,13 @@
     </div>
 
     <div class="pure-tabs-content">
-      <component
-        class="pure-tabs-content-item"
-        :is="currentTab"
-        :key="currentTab?.props?.title"
-      ></component>
+      <keep-alive>
+        <component
+          class="pure-tabs-content-item"
+          :is="currentTab"
+          :key="currentTab?.props?.title"
+        ></component>
+      </keep-alive>
     </div>
   </div>
 </template>
